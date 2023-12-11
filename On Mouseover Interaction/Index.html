@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container{
+        width: 610px;
+        height: 400px;
+        display: flex;
+        margin: 100px auto;
+     
+        justify-content: space-between;
+
+    }
+    .box1{
+     width: 400px;
+     height: 400px;
+     transition: all 2s;
+ 
+    }
+    .box2{
+     width: 100px;
+     height: 400px;
+     transition: all 2s;
+    
+    }
+    .box3{
+     width: 100px;
+     height: 400px;
+     transition: all 2s;
+  
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div onmouseover="firstchange()" id="1stbox" class="box1">
+       <img src="SEA.png" alt="">
+    </div>
+    <div onmouseover="secondchange()" id="2ndbox" class="box2">
+    <img src="BEACH.png" alt="" >
+    </div>
+    <div onmouseover="thirdchange()" id="3rdbox" class="box3">
+        <img src="CAR SHOWRROM.png" alt="">
+    </div>
+</div>
+    <script>
+        function firstchange(){
+            document.getElementById("1stbox").style.width="400px";
+            document.getElementById("2ndbox").style.width="100px";
+            document.getElementById("3rdbox").style.width="100px";
+         }
+         function secondchange(){
+            document.getElementById("2ndbox").style.width="400px";
+                document.getElementById("3rdbox").style.width="100px";
+            document.getElementById("1stbox").style.width="100px";
+         }
+         function thirdchange(){
+            document.getElementById("3rdbox").style.width="400px";
+            document.getElementById("2ndbox").style.width="100px";
+            document.getElementById("1stbox").style.width="100px";
+         }
+    </script>
+</body>
+</html>
